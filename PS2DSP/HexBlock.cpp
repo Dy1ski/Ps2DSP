@@ -15,7 +15,7 @@ HexBlock::HexBlock()
 istream & HexBlock::read(istream & aIStream)
 {
 	// May need this
-	\
+	
 	// for loop may be needed her to read up to 16 characters into the buffer
 	for (int i = 0; i < aIStream.fBuffer; i++)
 	{

@@ -17,7 +17,7 @@ istream & HexBlock::read(istream & aIStream)
 	// May need this
 	
 	// for loop may be needed her to read up to 16 characters into the buffer
-	for (int i = 0; i < aIStream.fBuffer; i++)
+	for (int i = 0; i <= 16; i++)
 	{
 		aIStream >> aIStream.fBuffer[i];
 		// do i need a counter here to record the numbver of characters read in size

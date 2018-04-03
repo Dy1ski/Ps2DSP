@@ -9,15 +9,15 @@ HexBlock::HexBlock()
 	{
 		fBuffer[i] = 0;
 	}
-	fSize = 0;
+	fSize = 16;
 }
 
 istream & HexBlock::read(istream & aIStream)
 {
 	// May need this
-	
+	fSize = aIstream.gcount();
 	// for loop may be needed her to read up to 16 characters into the buffer
-	for (int i = 0; i <= 16; i++)
+	for (int i = 0; i < fSize; i++)
 	{
 		aIStream >> aIStream.fBuffer[i];
 		// do i need a counter here to record the numbver of characters read in size

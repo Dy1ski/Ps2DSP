@@ -5,7 +5,7 @@ using namespace std;
 
 HexBlock::HexBlock()
 {
-	for (int i = 0; i < 15; i++)
+	for (int i = 0; i < 16; i++)
 	{
 		fBuffer[i] = 0;
 	}

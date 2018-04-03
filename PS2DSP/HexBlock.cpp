@@ -28,8 +28,7 @@ istream & HexBlock::read(istream & aIStream)
 
 unsigned long HexBlock::size() const
 {
-	HexBlock BufferSize;
-	return sizeof(BufferSize.fBuffer); // this may not work
+	return fSize;
 }
 
 ostream & operator<<(std::ostream & aOStream, const HexBlock & aObject)

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PS2DSP", "PS2DSP\PS2DSP.vcxproj", "{B7A4FCB5-60E5-4502-BF54-4CE11F003379}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7A4FCB5-60E5-4502-BF54-4CE11F003379}.Debug|x64.ActiveCfg = Debug|x64
+		{B7A4FCB5-60E5-4502-BF54-4CE11F003379}.Debug|x64.Build.0 = Debug|x64
+		{B7A4FCB5-60E5-4502-BF54-4CE11F003379}.Debug|x86.ActiveCfg = Debug|Win32
+		{B7A4FCB5-60E5-4502-BF54-4CE11F003379}.Debug|x86.Build.0 = Debug|Win32
+		{B7A4FCB5-60E5-4502-BF54-4CE11F003379}.Release|x64.ActiveCfg = Release|x64
+		{B7A4FCB5-60E5-4502-BF54-4CE11F003379}.Release|x64.Build.0 = Release|x64
+		{B7A4FCB5-60E5-4502-BF54-4CE11F003379}.Release|x86.ActiveCfg = Release|Win32
+		{B7A4FCB5-60E5-4502-BF54-4CE11F003379}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1747A72-862D-4516-A9D2-BCB78A5E6CFA}
+	EndGlobalSection
+EndGlobal

@@ -3,7 +3,7 @@ using namespace std;
 
 bool HexDump::open(const string & aInputFileName)
 {
-	return false;
+	if(aInputFileName)
 }
 
 void HexDump::close()
@@ -19,5 +19,8 @@ void HexDump::processInput()
 
 bool HexDump::operator()(const string& aInputFileName)
 {
-
+	if (aInputFileName.open(fInput))
+	{
+	
+	}
 }

@@ -21,6 +21,6 @@ bool HexDump::operator()(const string& aInputFileName)
 {
 	if (aInputFileName.open(fInput))
 	{
-	
+		// may use fData and the read method to produce standard output
 	}
 }

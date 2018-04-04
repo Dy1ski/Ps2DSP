@@ -1,14 +1,15 @@
 #pragma once
 #include <fstream>
 #include <string>
+using namespace std;
 class HexDump
 {
 private:
 	HexBlock fData;
-	std::ifstream fInput;
+	ifstream fInput;
 public:
 	// open input file
-	bool open(const std::string& aInputFileName);
+	bool open(const string& aInputFileName);
 	// close input file
 	void close();
 	// Generate hex dump to standard output. The method has to repeatedly
@@ -21,5 +22,5 @@ public:
 	// as functions that take a file name as parameter and return a Boolean
 	// value to indicate success or failure of producing a hex dump to
 	// standard output. The result is false only if we could not open input.
-	bool operator()(const std::string& aInputFileName);
-}; #pragma once
+	bool operator()(const string& aInputFileName);
+}; 

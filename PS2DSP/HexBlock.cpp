@@ -15,7 +15,7 @@ HexBlock::HexBlock()
 istream & HexBlock::read(istream & aIStream)
 {
 	// May need this
-	fSize = aIstream.gcount();
+	fSize = aIStream.gcount();
 	// for loop may be needed her to read up to 16 characters into the buffer
 	for (int i = 0; i < fSize; i++)
 	{
@@ -36,7 +36,7 @@ ostream & operator<<(std::ostream & aOStream, const HexBlock & aObject)
 	// make a for loop that goes through the buffer then out put it to aOStream
 	for (int i = 0; i < aObject.fBuffer; i++)
 	{
-		aOStream << aObject.fBuffer[i]; // this is probs wrong
+		aOStream << aObject.fBuffer[i] << endl; // this is probs wrong
 	
 	}
 	return aOStream;

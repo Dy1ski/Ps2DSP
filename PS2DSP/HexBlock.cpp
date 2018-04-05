@@ -36,8 +36,12 @@ ostream & operator<<(std::ostream & aOStream, const HexBlock & aObject)
 	// make a for loop that goes through the buffer then out put it to aOStream
 	for (int i = 0; i < aObject.fBuffer; i++)
 	{
-		aOStream << aObject.fBuffer[i] << endl; // this is probs wrong
+		aOStream << /*(char)i??  << */aObject.fBuffer[i] << endl; // this is probs wrong
 	
 	}
 	return aOStream;
 }
+
+/* Need to put in a (char)i something in this somewhere
+Like lab 2
+*/

@@ -14,7 +14,7 @@ void HexDump::close()
 
 void HexDump::processInput()
 {
-
+	// use fdata here
 }
 
 bool HexDump::operator()(const string& aInputFileName)
@@ -22,5 +22,6 @@ bool HexDump::operator()(const string& aInputFileName)
 	if (aInputFileName.open(fInput))
 	{
 		// may use fData and the read method to produce standard output
+		// have a else statement if the file fails to open or close it
 	}
 }

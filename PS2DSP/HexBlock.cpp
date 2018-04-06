@@ -34,9 +34,9 @@ unsigned long HexBlock::size() const
 ostream & operator<<(std::ostream & aOStream, const HexBlock & aObject)
 {
 	// make a for loop that goes through the buffer then out put it to aOStream
-	for (int i = 0; i < aObject.fBuffer; i++)
+	for (int i = 0; i < aObject.fSize; i++)
 	{
-		aOStream << /*(char)i??  << */aObject.fBuffer[i] << endl; // this is probs wrong
+		aOStream << (unsigned char)i << ":"  << */aObject.fBuffer[i] << endl; // this is probs wrong
 	
 	}
 	return aOStream;

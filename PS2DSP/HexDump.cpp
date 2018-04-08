@@ -3,7 +3,16 @@ using namespace std;
 
 bool HexDump::open(const string & aInputFileName)
 {
-	if(aInputFileName)
+	fInput.open(aInputFileName)
+	if(!fInput.good())
+	{
+		return false;
+		cerr << "File has failed to open" << endl;
+	}
+	else
+	{
+		return true;
+	}
 }
 
 void HexDump::close()

@@ -14,15 +14,8 @@ HexBlock::HexBlock()
 
 istream & HexBlock::read(istream & aIStream)
 {
-	// May need this
+	aIStream.read((char*)fBuffer, 16);
 	fSize = aIStream.gcount();
-	// for loop may be needed her to read up to 16 characters into the buffer
-	for (int i = 0; i < fSize; i++)
-	{
-		aIStream >> aIStream.fBuffer[i];
-		// do i need a counter here to record the numbver of characters read in size
-		// maybe aIStream.size++
-	}
 	return aIStream;
 }
 
@@ -36,12 +29,29 @@ ostream & operator<<(std::ostream & aOStream, const HexBlock & aObject)
 	// make a for loop that goes through the buffer then out put it to aOStream
 	for (int i = 0; i < aObject.fSize; i++)
 	{
-		aOStream << (unsigned char)i << ":\t"  << aObject.fBuffer[i] << endl; // this is probs wrong
-		/* something might need to go beforwe the unsigned char*/
+		int lineGaps = 51;
+		if (i == 8)
+		{
+			aOstream << "|";
+			lineGaps -= -2
+		}
+			aOStream << setw(2) << setfill('0');
+			aOstream << uppercase << hex << int(aObject.fBuffer[i]) << " ";
+			lineGaps -= 3;
 	}
-	return aOStream;
-}
+	string LineASCII;
 
-/* Need to put in a (char)i something in this somewhere
-Like lab 2
-*/
+		for (int j = 0; j < aObject.fSize; j++)
+		{
+			lineASCII += aObject.fBuffer[j];
+		}
+			for (int k = 0; k < LineASCII.length(); k++)
+			{
+				if (int(lineASCII[k]) < 33)
+				{
+					lineASCII[k] = ".";
+				}
+			}
+			aOStream << lineASCII << endl;
+			return aOStream;
+}

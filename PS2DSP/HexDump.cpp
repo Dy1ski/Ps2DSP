@@ -6,10 +6,10 @@ bool HexDump::open(const string & aInputFileName)
 	fInput.open(aInputFileName)
 	if(!fInput.good())
 	{
-		return false;
 		cerr << "File has failed to open" << endl;
+		return false;
 	}
-	else
+	else // may not need this
 	{
 		return true;
 	}
@@ -17,20 +17,29 @@ bool HexDump::open(const string & aInputFileName)
 
 void HexDump::close()
 {
-	HexDump File;
-	File.fInput.close();
+	fInput.close();
 }
 
 void HexDump::processInput()
 {
-	// use fdata here
+	while (fData.size() >= 16)
+	{
+		cout << setw(8) << setfill('0');
+		cout << hex << (int)fInput.tellg() << ": ";
+		fData.read(fInput);
+		cout << fData;
+	}
+	
 }
 
 bool HexDump::operator()(const string& aInputFileName)
 {
-	if (aInputFileName.open(fInput))
+	if (!open(aInputFileName))
 	{
-		// may use fData and the read method to produce standard output
-		// have a else statement if the file fails to open or close it
+		return false;
 	}
+
+	processInput();
+	close();
+	return true;
 }
